@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head th:replace="~{base :: head}"><title></title></head>
+  <body>
+    <div th:replace="~{base :: cabecalho}"></div>
+    <div class="container">
+        <div th:replace="~{base :: titulo('Cadastro de Produto')}"></div>
+        <div class="card">
+          <form class="card-body" action="/cadastro/novo" method="POST">
+              <div class="form-group">
+                  <label>Código do produtos</label>
+                  <label>
+                      <input name="codigoProduto" class="form-control" placeholder="código do produtos"/>
+                  </label>
+                  <small>Informe o código do produtos</small>
+              </div>
+              <div class="form-group">
+                  <label>Nome do produtos</label>
+                  <label>
+                      <input class="form-control" name="descricaoProduto" placeholder="descrição do produtos"/>
+                  </label>
+                  <small>Informe a descrição do produtos</small>
+              </div>
+              <div class="form-group">
+                  <label>Preço do produtos</label>
+                  <label>
+                      <input class="form-control" name="precoProduto" placeholder="preço do produtos"/>
+                  </label>
+                  <small>Informe o preço do produtos</small>
+              </div>
+              <div class="form-group">
+                  <label>Quantidade do produtos</label>
+                  <label>
+                      <input class="form-control" name="quantidadeProduto" placeholder="quantidade do produtos"/>
+                  </label>
+                  <small>Informe a quantidade do produtos</small>
+              </div>
+              <button type="submit">Cadastrar</button>
+          </form>
+        </div>
+    </div>
+  </body>
+</html>

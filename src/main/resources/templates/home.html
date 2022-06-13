@@ -1,0 +1,26 @@
+<!DOCTYPE>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      lang="pt-br">
+<head th:replace="~{base :: head}"><title>Home</title></head>
+    <body>
+        <div th:replace="~{base :: cabecalho}"></div>
+        <nav>
+            <a href="/home">Todos os produtos</a>
+            <a href="">Fluxo de caixa</a>
+            <a href="../cadastro/formulario">Novo cadastro</a>
+        </nav>
+
+        <div th:each="Produtos : ${produtos}">
+
+            <div>Código do produtos<span th:text="${codigoProduto}">7894561237894</span></div>
+
+            <div>Descrição do produtos<span th:text="${descricaoProduto}"></span></div>
+
+            <div>Quantidade<span th:text="${#numbers.formatCurrency(quantidadeProduto)}"></span></div>
+
+            <div>Preço<span th:text="${precoProduto}"></span></div>
+        </div>
+    </body>
+</html>
