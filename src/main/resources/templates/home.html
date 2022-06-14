@@ -12,15 +12,15 @@
             <a href="../cadastro/formulario">Novo cadastro</a>
         </nav>
 
-        <div th:each="Produtos : ${produtos}">
+        <div>
 
-            <div>Código do produtos<span th:text="${codigoProduto}">7894561237894</span></div>
+            <div>Código do produtos</div>
 
-            <div>Descrição do produtos<span th:text="${descricaoProduto}"></span></div>
+            <div>Descrição do produtos</div>
 
-            <div>Quantidade<span th:text="${#numbers.formatCurrency(quantidadeProduto)}"></span></div>
+            <div>Quantidade</div>
 
-            <div>Preço<span th:text="${precoProduto}"></span></div>
+            <div>Preço</div>
         </div>
     </body>
 </html>
